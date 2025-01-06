@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: stock_management
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - stock_management_network
+    restart: always
+
+volumes:
+  mysql_data:
+
+networks:
+  fault_network:
+    driver: bridge
