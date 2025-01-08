@@ -1,6 +1,4 @@
-# stockManagementApplication
-Stock Management Application
-
+## Stock Management Application
 This project is a Spring Boot application for stock management. The application allows you to perform CRUD operations on categories and products.
 
 ## Requirements
